@@ -1,7 +1,0 @@
-# Скачай
-curl -L https://packages.confluent.io/archive/7.6/confluent-community-7.6.0.tar.gz | tar -xz
-
-cd confluent-7.6.0
-
-# Запусти
-bin/schema-registry-start etc/schema-registry/schema-registry.properties

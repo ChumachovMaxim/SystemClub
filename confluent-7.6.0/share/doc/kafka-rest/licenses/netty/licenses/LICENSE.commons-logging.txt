@@ -1,1 +1,0 @@
-LICENSE.log4j.txt

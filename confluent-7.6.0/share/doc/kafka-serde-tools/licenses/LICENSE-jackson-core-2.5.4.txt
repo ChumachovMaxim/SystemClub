@@ -1,1 +1,0 @@
-../../ksqldb/licenses/LICENSE-jackson-core-2.8.4.txt

@@ -1,8 +1,0 @@
-[2025-10-31 02:26:11,829] INFO [Broker id=1] Deleting 1 partition(s). (state.change.logger)
-[2025-10-31 02:26:11,953] INFO [Broker id=1] Transitioning 1 partition(s) to local leaders. (state.change.logger)
-[2025-10-31 02:26:11,954] INFO [Broker id=1] Creating new partition user.events-0 with topic id a9_KLf31RqiCRiJcSJPJGg. (state.change.logger)
-[2025-10-31 02:26:11,957] INFO [Broker id=1] Leader user.events-0 with topic id Some(a9_KLf31RqiCRiJcSJPJGg) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader None and previous leader epoch was -1. (state.change.logger)
-[2025-10-31 02:26:37,354] INFO [Broker id=1] Deleting 1 partition(s). (state.change.logger)
-[2025-10-31 02:26:37,476] INFO [Broker id=1] Transitioning 1 partition(s) to local leaders. (state.change.logger)
-[2025-10-31 02:26:37,476] INFO [Broker id=1] Creating new partition user.events-0 with topic id Cx7wpcoWR0eBj2-03a9E6Q. (state.change.logger)
-[2025-10-31 02:26:37,480] INFO [Broker id=1] Leader user.events-0 with topic id Some(Cx7wpcoWR0eBj2-03a9E6Q) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader None and previous leader epoch was -1. (state.change.logger)
