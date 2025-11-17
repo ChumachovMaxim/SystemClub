@@ -1,0 +1,15 @@
+#auth:
+#  jwks-url: ${AUTH_JWKS_URL:http://auth-service:8082/.well-known/jwks.json}
+#  jwks-cache-ttl-seconds: 86400   # 24 часа
+#  jwks-refresh-cooldown-ms: 60000 # 1 минута
+#
+## Actuator
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info,prometheus
+#
+#logging:
+#  level:
+#    org.example.auth.client: INFO

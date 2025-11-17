@@ -1,0 +1,31 @@
+replicaCount: 3
+
+image:
+  tag: "v1.0.0"
+
+ingress:
+  hosts:
+    - host: auth.yourdomain.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: auth-tls-prod
+      hosts:
+        - auth.yourdomain.com
+
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 512Mi
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+
+serviceMonitor:
+  enabled: true

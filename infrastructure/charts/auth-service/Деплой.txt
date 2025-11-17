@@ -1,0 +1,10 @@
+# Dev
+helm upgrade --install auth-service ./helm/auth-service \
+  --values values.yaml \
+  --namespace dev --create-namespace
+
+# Prod
+helm upgrade --install auth-service ./helm/auth-service \
+  --values values.yaml \
+  --values values-prod.yaml \
+  --namespace prod --create-namespace

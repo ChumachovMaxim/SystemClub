@@ -1,0 +1,1 @@
+../../ksqldb/licenses/LICENSE-jackson-databind-2.8.4.txt

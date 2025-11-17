@@ -1,0 +1,163 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/studio
+    username: postgres
+    password:
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: studio-group
+minio:
+  url: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket: studio-attachments   # теперь используется в MinioService
+
+kafka:
+  schema-registry-url: http://localhost:8081
+
+
+#kafka:
+#  bootstrap-servers: localhost:9092
+#  schema-registry-url: http://localhost:8081
+#  consumer:
+#    group-id: studio-group
+jwt:
+  secret: 24651265371243512735682153567215312736218312638721636872187
+  expiration-time: 3600000   # 1 час
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+server:
+  port: 8082
+
+logging:
+  level:
+    root: DEBUG
+    org.example.studio: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+    org.springframework.web.multipart: DEBUG
+    io.minio: DEBUG
+    # Отключаем спам
+    org.apache.kafka: WARN
+    io.lettuce: WARN
+    io.netty: WARN
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/studio
+#    username: postgres
+#    password: 228305
+#    driver-class-name: org.postgresql.Driver
+#  flyway:
+#    enabled: true
+#    locations: classpath:db/migration
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#
+## src/main/resources/application.yml
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/studio
+#    username: postgres
+#    password: postgres
+#  flyway:
+#    enabled: true
+#    locations: classpath:db/migration
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    show-sql: true
+#  redis:
+#    host: localhost
+#    port: 6379
+#  servlet:
+#    multipart:
+#      max-file-size: 10MB
+#      max-request-size: 10MB
+#
+#minio:
+#  url: http://localhost:9000
+#  access-key: minioadmin
+#  secret-key: minioadmin
+#  bucket: studio-attachments
+#
+#kafka:
+#  bootstrap-servers: localhost:9092
+#  schema-registry-url: http://localhost:8081
+#  consumer:
+#    group-id: studio-group
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info,metrics,prometheus
+#  metrics:
+#    export:
+#      prometheus:
+#        enabled: true
+#
+#logging:
+#  level:
+#    org.springframework: INFO
+#    org.example.studio: INFO
+#
+#minio:
+#  url: http://localhost:9000
+#  access-key: minioadmin
+#  secret-key: minioadmin
+#  bucket-name: "studio-content" # Название бакета (корзины)
+#
+#kafka:
+#  bootstrap-servers: localhost:9092
+#  schema-registry-url: http://localhost:8081
+#  consumer:
+#    group-id: studio-group
+#
+#jwt:
+#  secret: 24651265371243512735682153567215312736218312638721636872187
+#
+#  expiration-time: 3600000
+#server:
+#  port: 8082
+#

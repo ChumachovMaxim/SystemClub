@@ -1,0 +1,55 @@
+<configuration>
+    <!-- Стандартные цвета и форматы Spring Boot -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <!-- Глобальный уровень — DEBUG (всё видно) -->
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- ===================== ПАКЕТЫ — МАКСИМАЛЬНО ПОДРОБНО ===================== -->
+    <logger name="org.example.studio"                level="DEBUG"/>
+    <logger name="org.example.studio.security"       level="DEBUG"/>
+    <logger name="org.example.studio.controller"     level="DEBUG"/>
+    <logger name="org.example.studio.service"        level="DEBUG"/>
+    <logger name="org.example.studio.repository"     level="DEBUG"/>
+    <logger name="org.example.studio.exception"      level="DEBUG"/>
+
+    <!-- ===================== JPA / SQL — ЧТОБЫ ВИДЕТЬ ПАРАМЕТРЫ ===================== -->
+    <logger name="org.hibernate.SQL"                        level="DEBUG"/>
+    <logger name="org.hibernate.type.descriptor.sql"        level="TRACE"/>
+    <logger name="org.hibernate.engine.jdbc.env.internal"   level="DEBUG"/>
+
+    <!-- ===================== Spring MVC — ВИДИМ КАКОЙ КОНТРОЛЛЕР ВЫЗВАН ===================== -->
+    <logger name="org.springframework.web.servlet.DispatcherServlet"        level="DEBUG"/>
+    <logger name="org.springframework.web.servlet.mvc.method.annotation"    level="DEBUG"/>
+
+    <!-- ===================== Multipart — ЧТОБЫ ВИДЕТЬ ФАЙЛЫ ===================== -->
+    <logger name="org.apache.tomcat.util.http.fileupload"   level="DEBUG"/>
+    <logger name="org.springframework.web.multipart"       level="DEBUG"/>
+
+    <!-- ===================== MinIO клиент ===================== -->
+    <logger name="io.minio"                                 level="DEBUG"/>
+
+    <!-- ===================== ОТКЛЮЧАЕМ СПАМ ===================== -->
+    <!-- Kafka -->
+    <logger name="org.apache.kafka"                         level="WARN"/>
+    <logger name="org.springframework.kafka"                level="INFO"/>
+
+    <!-- Redis / Lettuce -->
+    <logger name="io.lettuce"                               level="WARN"/>
+    <logger name="org.springframework.data.redis"           level="INFO"/>
+
+    <!-- Netty (Lettuce, Kafka) -->
+    <logger name="io.netty"                                 level="WARN"/>
+
+    <!-- HikariCP -->
+    <logger name="com.zaxxer.hikari"                        level="INFO"/>
+
+    <!-- Spring Boot auto‑config -->
+    <logger name="org.springframework.boot.autoconfigure"   level="INFO"/>
+
+    <!-- Всё остальное Spring — только INFO -->
+    <logger name="org.springframework"                      level="INFO"/>
+</configuration>

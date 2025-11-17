@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+# Логи — только JSON
+logging:
+  level:
+    root: INFO
+    org.example.auth: WARN
+
+# Actuator — минимум
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+# Swagger — выключен
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty name="APP_NAME" source="spring.application.name" defaultValue="auth-service"/>
+
+    <!-- JSON для Loki -->
+    <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <includeMdcKeyName>requestId</includeMdcKeyName>
+            <includeMdcKeyName>userId</includeMdcKeyName>
+            <includeMdcKeyName>ip</includeMdcKeyName> <!-- ← ДОБАВИТЬ -->
+            <customFields>{"app":"${APP_NAME}", "env":"prod"}</customFields>
+        </encoder>
+    </appender>
+
+    <!-- Читаемый текст -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level [req:%X{requestId}] [ip:%X{ip}] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ОДИН root! -->
+    <root level="INFO">
+        <appender-ref ref="JSON_CONSOLE"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

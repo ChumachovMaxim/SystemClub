@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+# Логи — читаемые
+logging:
+  level:
+    org.example.auth: DEBUG
+
+# Actuator — всё
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+
+# Swagger — включён
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /v3/api-docs

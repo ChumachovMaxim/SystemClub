@@ -1,0 +1,9 @@
+apiVersion: v2
+name: auth-service
+description: Authentication Microservice
+type: application
+version: 0.1.0
+appVersion: "1.0"
+maintainers:
+  - name: Maksim
+    email: maksim@example.com

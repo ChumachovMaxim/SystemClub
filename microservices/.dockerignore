@@ -1,0 +1,13 @@
+# Игнорировать артефакты и кэш
+target/
+.git/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+**/.classpath
+**/.project
+**/.settings
+
+ docs/
+ temp/

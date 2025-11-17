@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nginx:
+    image: openresty/openresty:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+    networks:
+      - app-network
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+  app:
+    image: httpd:latest
+    expose:
+      - "80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
