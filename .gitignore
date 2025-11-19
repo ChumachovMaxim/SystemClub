@@ -2,6 +2,7 @@
 .idea/
 *.iml
 *.iws
+.env
 out/
 
 # Maven Wrapper (не нужен на GitHub)

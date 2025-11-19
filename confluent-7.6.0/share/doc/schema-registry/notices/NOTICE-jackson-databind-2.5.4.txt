@@ -1,0 +1,1 @@
+../../ksqldb/notices/NOTICE-jackson-databind-2.8.5.txt

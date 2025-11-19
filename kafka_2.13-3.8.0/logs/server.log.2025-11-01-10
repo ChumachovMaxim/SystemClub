@@ -1,0 +1,2 @@
+[2025-11-01 10:15:12,768] INFO [GroupCoordinator 1]: Stabilized group schema-registry generation 3 (__consumer_offsets-29) with 1 members (kafka.coordinator.group.GroupCoordinator)
+[2025-11-01 10:15:15,051] INFO [GroupCoordinator 1]: Assignment received from leader sr-1-17db8db5-71e1-4f13-a589-dcda1dea3f14 for group schema-registry for generation 3. The group has 1 members, 0 of which are static. (kafka.coordinator.group.GroupCoordinator)

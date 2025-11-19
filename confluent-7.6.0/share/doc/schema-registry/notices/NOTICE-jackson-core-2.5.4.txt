@@ -1,0 +1,1 @@
+../../ksqldb/notices/NOTICE-jackson-core-2.8.5.txt

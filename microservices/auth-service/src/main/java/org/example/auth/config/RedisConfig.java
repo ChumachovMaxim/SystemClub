@@ -1,4 +1,3 @@
-// src/main/java/org/example/auth/config/RedisConfig.java
 package org.example.auth.config;
 
 import org.springframework.context.annotation.Bean;
@@ -14,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class RedisConfig {
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
-        return new LettuceConnectionFactory(); // берёт настройки из application.yml
+        return new LettuceConnectionFactory();
     }
 
     @Bean

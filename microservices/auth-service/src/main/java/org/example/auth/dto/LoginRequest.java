@@ -1,4 +1,3 @@
-// LoginRequest.java
 package org.example.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;

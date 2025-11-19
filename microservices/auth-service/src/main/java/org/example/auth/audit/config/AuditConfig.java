@@ -4,5 +4,5 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableConfigurationProperties(AuditProperties.class) // ← Явно регистрируем
+@EnableConfigurationProperties(AuditProperties.class)
 public class AuditConfig {}

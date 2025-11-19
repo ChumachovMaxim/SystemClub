@@ -1,4 +1,3 @@
-// src/main/java/org/example/auth/audit/service/AuditService.java
 package org.example.auth.audit.service;
 
 import lombok.RequiredArgsConstructor;

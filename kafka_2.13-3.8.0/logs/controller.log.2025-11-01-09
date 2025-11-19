@@ -1,0 +1,6 @@
+[2025-11-01 09:14:06,505] INFO [QuorumController id=1] Fencing broker 1 because its session has timed out. (org.apache.kafka.controller.ReplicationControlManager)
+[2025-11-01 09:14:06,772] INFO [QuorumController id=1] handleBrokerFenced: changing 54 partition(s) (org.apache.kafka.controller.ReplicationControlManager)
+[2025-11-01 09:14:06,786] INFO [QuorumController id=1] Replayed BrokerRegistrationChangeRecord modifying the registration for broker 1: BrokerRegistrationChangeRecord(brokerId=1, brokerEpoch=6, fenced=1, inControlledShutdown=0, logDirs=[]) (org.apache.kafka.controller.ClusterControlManager)
+[2025-11-01 09:14:06,848] INFO [QuorumController id=1] The request from broker 1 to unfence has been granted because it has caught up with the offset of its register broker record 6. (org.apache.kafka.controller.BrokerHeartbeatManager)
+[2025-11-01 09:14:06,892] INFO [QuorumController id=1] handleBrokerUnfenced: changing 54 partition(s) (org.apache.kafka.controller.ReplicationControlManager)
+[2025-11-01 09:14:06,942] INFO [QuorumController id=1] Replayed BrokerRegistrationChangeRecord modifying the registration for broker 1: BrokerRegistrationChangeRecord(brokerId=1, brokerEpoch=6, fenced=-1, inControlledShutdown=0, logDirs=[]) (org.apache.kafka.controller.ClusterControlManager)
